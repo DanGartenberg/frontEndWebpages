@@ -1,0 +1,465 @@
+.ss-sleep-animal-page {
+  --ss-midnight: #05263f;
+  --ss-dark-purple: #52526c;
+  --ss-light-purple: #b3a0b9;
+  --ss-sky-blue: #7caec6;
+  --ss-nectarine: #ee905a;
+  --ss-soft-pink: #edc4b7;
+  --ss-cream: #f8efe8;
+  --ss-border: rgba(179, 160, 185, 0.26);
+  --ss-shadow-lg: 0 30px 80px rgba(3, 18, 31, 0.45);
+  --ss-shadow-md: 0 18px 40px rgba(3, 18, 31, 0.3);
+  --ss-radius-xl: 30px;
+  --ss-radius-lg: 24px;
+  --ss-radius-md: 18px;
+  --ss-container: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--ss-cream);
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(124, 174, 198, 0.2), transparent 28%),
+    radial-gradient(circle at top right, rgba(238, 144, 90, 0.15), transparent 22%),
+    linear-gradient(180deg, #041827 0%, #072948 38%, #0a1f38 100%);
+  overflow: hidden;
+}
+
+.ss-sleep-animal-page *,
+.ss-sleep-animal-page *::before,
+.ss-sleep-animal-page *::after { box-sizing: border-box; }
+.ss-sleep-animal-page img { display: block; width: 100%; height: auto; }
+.ss-sleep-animal-page a { color: inherit; text-decoration: none; }
+
+.ss-sleep-animal-page .ss-hero,
+.ss-sleep-animal-page .ss-section {
+  width: min(calc(100% - 2rem), var(--ss-container));
+  margin: 0 auto;
+}
+
+.ss-sleep-animal-page .ss-hero { padding: 1.2rem 0 4.5rem; }
+
+.ss-sleep-animal-page .ss-topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 1.1rem;
+  background: rgba(5, 38, 63, 0.62);
+  border: 1px solid rgba(124, 174, 198, 0.15);
+  border-radius: 999px;
+  backdrop-filter: blur(14px);
+}
+
+.ss-sleep-animal-page .ss-topbar-links {
+  display: flex;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  color: rgba(248, 239, 232, 0.84);
+}
+
+.ss-sleep-animal-page .ss-topbar-links a:hover,
+.ss-sleep-animal-page .ss-topbar-links a:focus-visible { color: var(--ss-soft-pink); }
+
+.ss-sleep-animal-page .ss-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3.3rem;
+}
+
+.ss-sleep-animal-page .ss-eyebrow {
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ss-sky-blue);
+}
+
+.ss-sleep-animal-page h1,
+.ss-sleep-animal-page h2,
+.ss-sleep-animal-page h3 {
+  margin: 0;
+  font-family: "Avenir Next Condensed", "Arial Narrow", "Avenir Next", sans-serif;
+  line-height: 0.98;
+  color: #fff;
+}
+
+.ss-sleep-animal-page h1 {
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  letter-spacing: -0.04em;
+  max-width: 11ch;
+}
+
+.ss-sleep-animal-page h2 {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  letter-spacing: -0.035em;
+  max-width: 14ch;
+}
+
+.ss-sleep-animal-page h3 {
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: #fdf8f3;
+}
+
+.ss-sleep-animal-page p {
+  margin: 0;
+  color: rgba(248, 239, 232, 0.82);
+  line-height: 1.72;
+  font-size: 1.02rem;
+}
+
+.ss-sleep-animal-page .ss-hero-subheadline {
+  margin-top: 1.4rem;
+  max-width: 62ch;
+  font-size: 1.08rem;
+}
+
+.ss-sleep-animal-page .ss-hero-actions,
+.ss-sleep-animal-page .ss-cta-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.8rem;
+}
+
+.ss-sleep-animal-page .ss-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.1rem;
+  padding: 1rem 1.65rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.ss-sleep-animal-page .ss-button:hover,
+.ss-sleep-animal-page .ss-button:focus-visible { transform: translateY(-2px); }
+
+.ss-sleep-animal-page .ss-button-primary {
+  background: #0a2f4b;
+  color: #ffffff;
+  box-shadow: 0 12px 26px rgba(3, 18, 31, 0.24);
+}
+
+.ss-sleep-animal-page .ss-button-primary:hover,
+.ss-sleep-animal-page .ss-button-primary:focus-visible {
+  background: #0d3858;
+  box-shadow: 0 16px 30px rgba(3, 18, 31, 0.28);
+}
+
+.ss-sleep-animal-page .ss-button-secondary {
+  background: rgba(124, 174, 198, 0.12);
+  color: var(--ss-cream);
+  border: 1px solid rgba(124, 174, 198, 0.35);
+  box-shadow: 0 10px 22px rgba(3, 18, 31, 0.16);
+}
+
+.ss-sleep-animal-page .ss-hero-proof {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  align-items: start;
+}
+
+.ss-sleep-animal-page .ss-proof-chip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 3.7rem;
+  padding: 0.95rem 1rem 0.95rem 2.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(124, 174, 198, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(248, 239, 232, 0.86);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  text-wrap: pretty;
+}
+
+.ss-sleep-animal-page .ss-proof-chip::before {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: var(--ss-soft-pink);
+  box-shadow: 0 0 16px rgba(237, 196, 183, 0.45);
+}
+
+.ss-sleep-animal-page .ss-hero-visual { display: grid; gap: 1rem; }
+
+.ss-sleep-animal-page .ss-visual-card,
+.ss-sleep-animal-page .ss-pyramid-card,
+.ss-sleep-animal-page .ss-process-step,
+.ss-sleep-animal-page .ss-comparison-card,
+.ss-sleep-animal-page .ss-callout-panel,
+.ss-sleep-animal-page .ss-cta-panel,
+.ss-sleep-animal-page .ss-app-shot,
+.ss-sleep-animal-page .ss-animal-card {
+  overflow: hidden;
+  border-radius: var(--ss-radius-lg);
+  border: 1px solid rgba(179, 160, 185, 0.18);
+  background: linear-gradient(180deg, rgba(103, 103, 132, 0.36), rgba(10, 27, 47, 0.92));
+  box-shadow: var(--ss-shadow-md);
+}
+
+.ss-sleep-animal-page .ss-main-visual {
+  border-radius: var(--ss-radius-xl);
+  box-shadow: var(--ss-shadow-lg);
+  min-height: 360px;
+}
+
+.ss-sleep-animal-page .ss-visual-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ss-sleep-animal-page .ss-mini-card { min-height: 190px; }
+.ss-sleep-animal-page .ss-mini-card img,
+.ss-sleep-animal-page .ss-main-visual img { height: 100%; object-fit: cover; }
+.ss-sleep-animal-page .ss-main-visual img { object-position: center; }
+.ss-sleep-animal-page .ss-mini-card img { object-position: center; }
+
+.ss-sleep-animal-page .ss-section { padding: 4.75rem 0; }
+.ss-sleep-animal-page .ss-section-heading { display: grid; gap: 1rem; margin-bottom: 2rem; }
+.ss-sleep-animal-page .ss-section-heading p:last-child { max-width: 72ch; }
+
+.ss-sleep-animal-page .ss-pyramid-grid,
+.ss-sleep-animal-page .ss-process-grid,
+.ss-sleep-animal-page .ss-framework-grid,
+.ss-sleep-animal-page .ss-comparison-grid,
+.ss-sleep-animal-page .ss-app-screenshot-rail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.ss-sleep-animal-page .ss-pyramid-visual-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.8rem;
+}
+
+.ss-sleep-animal-page .ss-pyramid-visual { margin: 0; max-width: 760px; text-align: center; }
+.ss-sleep-animal-page .ss-pyramid-visual img {
+  max-width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 26px rgba(3, 18, 31, 0.16));
+}
+.ss-sleep-animal-page .ss-pyramid-visual figcaption { margin-top: 1rem; color: rgba(248, 239, 232, 0.72); line-height: 1.65; }
+
+.ss-sleep-animal-page .ss-callout-band { padding-top: 0; }
+.ss-sleep-animal-page .ss-callout-panel {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 0.95fr 1.05fr;
+  padding: 1.5rem;
+}
+
+.ss-sleep-animal-page .ss-process-step,
+.ss-sleep-animal-page .ss-framework-card,
+.ss-sleep-animal-page .ss-comparison-card,
+.ss-sleep-animal-page .ss-pyramid-card { padding: 1.5rem; }
+
+.ss-sleep-animal-page .ss-pyramid-card h3,
+.ss-sleep-animal-page .ss-pyramid-card h3 a,
+.ss-sleep-animal-page .ss-process-step h3,
+.ss-sleep-animal-page .ss-process-step h3 a,
+.ss-sleep-animal-page .ss-framework-card h3,
+.ss-sleep-animal-page .ss-framework-card h3 a,
+.ss-sleep-animal-page .ss-comparison-card h3,
+.ss-sleep-animal-page .ss-comparison-card h3 a,
+.ss-sleep-animal-page .ss-animal-card h3,
+.ss-sleep-animal-page .ss-animal-card h3 a,
+.ss-sleep-animal-page .ss-app-shot h3,
+.ss-sleep-animal-page .ss-app-shot h3 a,
+.ss-sleep-animal-page .ss-faq-list summary,
+.ss-sleep-animal-page .ss-faq-list summary a {
+  color: #fffaf5 !important;
+  -webkit-text-fill-color: #fffaf5;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.ss-sleep-animal-page .ss-pyramid-card p,
+.ss-sleep-animal-page .ss-process-step p,
+.ss-sleep-animal-page .ss-framework-card p,
+.ss-sleep-animal-page .ss-comparison-card p,
+.ss-sleep-animal-page .ss-app-shot figcaption,
+.ss-sleep-animal-page .ss-faq-list details p {
+  color: rgba(248, 239, 232, 0.84);
+}
+
+.ss-sleep-animal-page .ss-pyramid-card,
+.ss-sleep-animal-page .ss-process-step,
+.ss-sleep-animal-page .ss-framework-card,
+.ss-sleep-animal-page .ss-comparison-card {
+  position: relative;
+}
+
+.ss-sleep-animal-page .ss-pyramid-card > * ,
+.ss-sleep-animal-page .ss-process-step > * ,
+.ss-sleep-animal-page .ss-framework-card > * ,
+.ss-sleep-animal-page .ss-comparison-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ss-sleep-animal-page .ss-step-number {
+  display: inline-flex;
+  width: 2.4rem;
+  height: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(124, 174, 198, 0.16);
+  color: var(--ss-soft-pink);
+  font-weight: 800;
+}
+
+.ss-sleep-animal-page .ss-app-screenshot-rail {
+  margin-top: 1.4rem;
+  align-items: start;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+.ss-sleep-animal-page .ss-app-shot { margin: 0; }
+.ss-sleep-animal-page .ss-app-shot img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: radial-gradient(circle at top, rgba(124, 174, 198, 0.18), rgba(5, 38, 63, 0.05));
+  object-position: center;
+}
+.ss-sleep-animal-page .ss-app-shot figcaption {
+  padding: 1rem 1rem 1.2rem;
+  color: rgba(248, 239, 232, 0.74);
+  font-size: clamp(0.82rem, 0.8rem + 0.06vw, 0.9rem);
+  line-height: 1.45;
+}
+
+.ss-sleep-animal-page .ss-feature-showcase,
+.ss-sleep-animal-page .ss-comparison-section,
+.ss-sleep-animal-page .ss-cta-panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ss-sleep-animal-page .ss-feature-showcase { grid-template-columns: 0.82fr 1.18fr; }
+.ss-sleep-animal-page .ss-comparison-section { grid-template-columns: 0.95fr 1.25fr; }
+.ss-sleep-animal-page .ss-cta-panel { grid-template-columns: 1.15fr 0.85fr; padding: 1.5rem; align-items: center; }
+
+.ss-sleep-animal-page .ss-comparison-grid {
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1rem;
+  align-content: start;
+}
+
+.ss-sleep-animal-page .ss-comparison-card {
+  min-width: 0;
+}
+
+.ss-sleep-animal-page .ss-comparison-card h3,
+.ss-sleep-animal-page .ss-comparison-card p {
+  max-width: 26ch;
+}
+
+.ss-sleep-animal-page .ss-featured-animals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ss-sleep-animal-page .ss-animal-card { margin: 0; }
+.ss-sleep-animal-page .ss-animal-card img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: linear-gradient(180deg, rgba(124, 174, 198, 0.08), rgba(5, 38, 63, 0.06));
+}
+.ss-sleep-animal-page .ss-animal-card figcaption { padding: 1rem 1rem 1.15rem; }
+.ss-sleep-animal-page .ss-animal-card figcaption p { color: var(--ss-sky-blue); margin-top: 0.25rem; }
+
+.ss-sleep-animal-page .ss-framework-section { position: relative; }
+.ss-sleep-animal-page .ss-framework-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.ss-sleep-animal-page .ss-framework-card {
+  border-radius: var(--ss-radius-lg);
+  border: 1px solid rgba(124, 174, 198, 0.16);
+  background: linear-gradient(180deg, rgba(124, 174, 198, 0.12), rgba(7, 20, 37, 0.9));
+  box-shadow: var(--ss-shadow-md);
+}
+
+.ss-sleep-animal-page .ss-faq-list { display: grid; gap: 0.8rem; }
+.ss-sleep-animal-page .ss-faq-list details {
+  border: 1px solid var(--ss-border);
+  border-radius: var(--ss-radius-md);
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ss-sleep-animal-page .ss-faq-list summary { cursor: pointer; font-weight: 800; color: var(--ss-cream); }
+.ss-sleep-animal-page .ss-faq-list details p { margin-top: 0.75rem; }
+.ss-sleep-animal-page .ss-closing-cta { padding-bottom: 6rem; }
+
+@media (max-width: 1080px) {
+  .ss-sleep-animal-page .ss-hero-layout,
+  .ss-sleep-animal-page .ss-feature-showcase,
+  .ss-sleep-animal-page .ss-comparison-section,
+  .ss-sleep-animal-page .ss-cta-panel,
+  .ss-sleep-animal-page .ss-callout-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .ss-sleep-animal-page .ss-featured-animals,
+  .ss-sleep-animal-page .ss-pyramid-grid,
+  .ss-sleep-animal-page .ss-process-grid,
+  .ss-sleep-animal-page .ss-framework-grid,
+  .ss-sleep-animal-page .ss-comparison-grid,
+  .ss-sleep-animal-page .ss-app-screenshot-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ss-sleep-animal-page .ss-hero-proof {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .ss-sleep-animal-page .ss-hero,
+  .ss-sleep-animal-page .ss-section { width: min(calc(100% - 1.2rem), var(--ss-container)); }
+  .ss-sleep-animal-page .ss-topbar { border-radius: 24px; padding: 1rem; }
+  .ss-sleep-animal-page .ss-topbar-links { display: none; }
+  .ss-sleep-animal-page .ss-hero-layout { margin-top: 2rem; }
+
+  .ss-sleep-animal-page .ss-hero-proof,
+  .ss-sleep-animal-page .ss-featured-animals,
+  .ss-sleep-animal-page .ss-visual-stack,
+  .ss-sleep-animal-page .ss-pyramid-grid,
+  .ss-sleep-animal-page .ss-process-grid,
+  .ss-sleep-animal-page .ss-framework-grid,
+  .ss-sleep-animal-page .ss-comparison-grid,
+  .ss-sleep-animal-page .ss-app-screenshot-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .ss-sleep-animal-page .ss-section { padding: 3.5rem 0; }
+  .ss-sleep-animal-page .ss-main-visual { min-height: 280px; }
+  .ss-sleep-animal-page .ss-mini-card { min-height: 180px; }
+  .ss-sleep-animal-page .ss-proof-chip { min-height: auto; }
+}
