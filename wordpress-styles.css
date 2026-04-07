@@ -405,6 +405,121 @@
   box-shadow: var(--ss-shadow-md);
 }
 
+.ss-sleep-animal-page .ss-library-section {
+  display: grid;
+  gap: 2rem;
+}
+
+.ss-sleep-animal-page .ss-library-intro {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.ss-sleep-animal-page .ss-library-intro-visual,
+.ss-sleep-animal-page .ss-library-card {
+  overflow: hidden;
+  border-radius: var(--ss-radius-lg);
+  border: 1px solid rgba(179, 160, 185, 0.18);
+  background: linear-gradient(180deg, rgba(103, 103, 132, 0.36), rgba(10, 27, 47, 0.92));
+  box-shadow: var(--ss-shadow-md);
+}
+
+.ss-sleep-animal-page .ss-library-intro-visual img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ss-sleep-animal-page .ss-library-intro-copy {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.ss-sleep-animal-page .ss-library-intro-copy h3 {
+  font-size: 1.8rem;
+  line-height: 1.02;
+}
+
+.ss-sleep-animal-page .ss-library-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.ss-sleep-animal-page .ss-library-group-heading {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.ss-sleep-animal-page .ss-library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ss-sleep-animal-page .ss-library-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.ss-sleep-animal-page .ss-library-thumb {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  object-position: center;
+  background: linear-gradient(180deg, rgba(124, 174, 198, 0.08), rgba(5, 38, 63, 0.06));
+}
+
+.ss-sleep-animal-page .ss-library-copy {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+
+.ss-sleep-animal-page .ss-library-meta {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ss-sky-blue);
+}
+
+.ss-sleep-animal-page .ss-library-title {
+  margin: -0.15rem 0 0;
+  color: var(--ss-soft-pink);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.ss-sleep-animal-page .ss-library-hook {
+  color: rgba(248, 239, 232, 0.94);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.ss-sleep-animal-page .ss-library-next {
+  color: rgba(248, 239, 232, 0.78);
+}
+
+.ss-sleep-animal-page .ss-library-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.ss-sleep-animal-page .ss-library-actions .ss-button {
+  min-height: 3.2rem;
+  padding: 0.8rem 1.1rem;
+  font-size: 0.92rem;
+}
+
 .ss-sleep-animal-page .ss-faq-list { display: grid; gap: 0.8rem; }
 .ss-sleep-animal-page .ss-faq-list details {
   border: 1px solid var(--ss-border);
@@ -420,6 +535,7 @@
 @media (max-width: 1080px) {
   .ss-sleep-animal-page .ss-hero-layout,
   .ss-sleep-animal-page .ss-feature-showcase,
+  .ss-sleep-animal-page .ss-library-intro,
   .ss-sleep-animal-page .ss-comparison-section,
   .ss-sleep-animal-page .ss-cta-panel,
   .ss-sleep-animal-page .ss-callout-panel {
@@ -430,6 +546,7 @@
   .ss-sleep-animal-page .ss-pyramid-grid,
   .ss-sleep-animal-page .ss-process-grid,
   .ss-sleep-animal-page .ss-framework-grid,
+  .ss-sleep-animal-page .ss-library-grid,
   .ss-sleep-animal-page .ss-comparison-grid,
   .ss-sleep-animal-page .ss-app-screenshot-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -453,9 +570,19 @@
   .ss-sleep-animal-page .ss-pyramid-grid,
   .ss-sleep-animal-page .ss-process-grid,
   .ss-sleep-animal-page .ss-framework-grid,
+  .ss-sleep-animal-page .ss-library-grid,
   .ss-sleep-animal-page .ss-comparison-grid,
   .ss-sleep-animal-page .ss-app-screenshot-rail {
     grid-template-columns: 1fr;
+  }
+
+  .ss-sleep-animal-page .ss-library-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ss-sleep-animal-page .ss-library-thumb {
+    min-height: 210px;
+    max-height: 260px;
   }
 
   .ss-sleep-animal-page .ss-section { padding: 3.5rem 0; }

@@ -246,7 +246,8 @@
 }
 
 .sap-article-grid,
-.sap-library-grid {
+.sap-library-grid,
+.sap-corpus-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -262,7 +263,8 @@
 .sap-source-card,
 .sap-callout,
 .sap-article-card,
-.sap-library-card {
+.sap-library-card,
+.sap-corpus-card {
   padding: 1.3rem;
 }
 
@@ -392,6 +394,16 @@
   background: linear-gradient(180deg, rgba(126, 78, 76, 0.28), rgba(10, 27, 47, 0.92));
 }
 
+.sap-keyword-row {
+  margin-top: 1.2rem;
+}
+
+.sap-chip-keyword {
+  background: rgba(124, 174, 198, 0.1);
+  border-color: rgba(124, 174, 198, 0.28);
+  color: #f6efe5;
+}
+
 @media (max-width: 1024px) {
   .sap-hero,
   .sap-split-section,
@@ -401,6 +413,7 @@
   .sap-related-grid,
   .sap-article-grid,
   .sap-library-grid,
+  .sap-corpus-grid,
   .sap-index-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -417,6 +430,7 @@
   .sap-related-grid,
   .sap-article-grid,
   .sap-library-grid,
+  .sap-corpus-grid,
   .sap-index-grid {
     grid-template-columns: 1fr;
   }

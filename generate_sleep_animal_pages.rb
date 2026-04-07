@@ -416,6 +416,633 @@ LIBRARY_REFERENCES = {
   }
 }.freeze
 
+EXTRA_LIBRARY_REFERENCES = {
+  sleepspace_validation_insomnia: {
+    title: "SleepSpace validation for insomnia",
+    short: "SleepSpace insomnia validation",
+    filename: "sleepSpaceValidationForInsomnia.docx",
+    summary: "Useful for insomnia-forward pages that connect phenotype interpretation to SleepSpace-specific validation and insomnia assessment work.",
+    groups: %i[insomnia_and_fragmentation nonrestorative_and_optimization general_foundation]
+  },
+  sleepspace_bsm_submission: {
+    title: "Behavioral Sleep Medicine submission proof",
+    short: "BSM submission proof",
+    filename: "BSM Submission Proof 20250730.pdf",
+    summary: "Useful for pages that frame SleepSpace as a behaviorally grounded sleep intervention platform rather than only a generic tracker.",
+    groups: %i[insomnia_and_fragmentation nonrestorative_and_optimization general_foundation]
+  },
+  sleepspace_ms_draft: {
+    title: "Restructured manuscript draft",
+    short: "SleepSpace manuscript draft",
+    filename: "Restructured MS draft 2024_08_27.docx",
+    summary: "Useful as local manuscript context for pages that emphasize measurement, intervention framing, and phenotype interpretation.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  sleepspace_protocol_slides: {
+    title: "Protocol for publication slides",
+    short: "Protocol publication slides",
+    filename: "Protocol for pub.pptx",
+    summary: "Useful for pages that describe implementation logic, measurement strategy, and intervention structure.",
+    groups: %i[insomnia_and_fragmentation general_foundation]
+  },
+  sleepspace_poster_final: {
+    title: "SleepSpace poster final",
+    short: "SleepSpace poster final",
+    filename: "Poster 20240528 final (1).pdf",
+    summary: "Useful for general evidence framing and for pages that discuss wearable-based sleep-wake classification or validation work.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  sleepspace_aacsm: {
+    title: "AACSM sleep publication",
+    short: "AACSM publication",
+    filename: "aacsm.pdf",
+    summary: "Useful for general scientific support on pages that discuss digital sleep measurement and SleepSpace research context.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  sleepspace_actigraphy_session: {
+    title: "Actigraphy Sleep Health session",
+    short: "Actigraphy session",
+    filename: "Actigraphy Sleep Health Session v5_12_20_2021.docx",
+    summary: "Useful for pages that emphasize actigraphy, sleep timing, sleep opportunity, and practical interpretation of longitudinal sleep data.",
+    groups: %i[circadian_and_schedule quantity_and_life_constraints general_foundation]
+  },
+  sleepspace_ubiquitous_computing: {
+    title: "Ubiquitous computing paper",
+    short: "Ubiquitous computing and sleep sensing",
+    filename: "ubiquitous_computing_paper_12.pdf",
+    summary: "Useful for pages that explain ambient sensing, digital phenotyping, and consumer-device-based sleep measurement.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  actigraphy_cole_richards: {
+    title: "Cole and Richards nursing overview on actigraphy and sleep assessment",
+    short: "Cole and Richards actigraphy overview",
+    filename: "2007 Cole & Richards Am J Nurs {26960}.pdf",
+    summary: "Useful for pages that explain actigraphy, diary interpretation, and real-world sleep measurement outside the lab.",
+    groups: %i[general_foundation quantity_and_life_constraints]
+  },
+  actigraphy_sadeh_review: {
+    title: "Sadeh review on the role and limitations of actigraphy in sleep medicine",
+    short: "Sadeh actigraphy review",
+    filename: "2010 Sadeh Sleep Med Rev {26945}.pdf",
+    summary: "Useful for any page that distinguishes wearable trends from formal sleep diagnostics.",
+    groups: %i[general_foundation circadian_and_schedule quantity_and_life_constraints]
+  },
+  circadian_shoji: {
+    title: "Shoji et al. Sleep Science",
+    short: "Shoji circadian context",
+    filename: "2015 Shoji et al. Sleep Sci {26961}.pdf",
+    summary: "Useful for pages about sleep timing, circadian preference, and schedule alignment.",
+    groups: %i[circadian_and_schedule special_overlap_profiles_b]
+  },
+  circadian_sekine: {
+    title: "Sekine et al. Sleep Medicine",
+    short: "Sekine sleep timing paper",
+    filename: "2014 Sekine et al. Sleep Med {26958}.pdf",
+    summary: "Useful for circadian and schedule pages that discuss timing mismatch and sleep regularity.",
+    groups: %i[circadian_and_schedule special_overlap_profiles_b]
+  },
+  work_sleep_germeys: {
+    title: "Germeys and Leineweber on sleep and work-related recovery",
+    short: "Work recovery and sleep",
+    filename: "2019 Germeys & Leineweber Sleep {26956}.pdf",
+    summary: "Useful for work-constrained, commuter, and overload phenotypes where sleep loss spills into performance and recovery.",
+    groups: %i[quantity_and_life_constraints special_overlap_profiles_b]
+  },
+  work_sleep_crain: {
+    title: "Crain, Brossoit, and Fisher on sleep and workplace psychology",
+    short: "Workplace sleep psychology",
+    filename: "2018 Crain, Brossoit, & Fisher J Bus Psychol {.pdf",
+    summary: "Useful for pages centered on work stress, constrained sleep opportunity, and recovery boundaries.",
+    groups: %i[quantity_and_life_constraints insomnia_and_fragmentation]
+  },
+  public_health_grandner: {
+    title: "Grandner et al. sleep health framework",
+    short: "Sleep health framework",
+    filename: "2016 Grandner et al {26860}.pdf",
+    summary: "Useful across pages that frame sleep as a multidimensional health construct rather than just time in bed.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization general_foundation]
+  },
+  sleep_health_jackson: {
+    title: "Jackson et al. Sleep",
+    short: "Sleep and population health",
+    filename: "2018 Jackson et al. Sleep {26936}.pdf",
+    summary: "Useful for pages that connect sleep phenotypes to broader functioning, health disparities, and social context.",
+    groups: %i[quantity_and_life_constraints general_foundation]
+  },
+  lifestyle_kline: {
+    title: "Kline on sleep as a lifestyle behavior",
+    short: "Sleep as lifestyle behavior",
+    filename: "2014 Kline Am J Lifestyle Med {26933}.pdf",
+    summary: "Useful for pages that explain sleep as a trainable health behavior influenced by exercise, routines, and daily structure.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization]
+  },
+  student_sleep_hershner_clin: {
+    title: "Hershner and O'Brien on sleep in college students",
+    short: "College sleep review",
+    filename: "2018 Hershner & O'Brien J Clin Sleep Med {2692.pdf",
+    summary: "Useful for late-schedule, irregular-routine, and under-slept young-adult pages.",
+    groups: %i[circadian_and_schedule quantity_and_life_constraints]
+  },
+  student_sleep_hershner_nat: {
+    title: "Hershner and Chervin on causes and consequences of sleepiness in college students",
+    short: "College sleepiness review",
+    filename: "2014 Hershner & Chervin Nat Sci Sleep {26908}.pdf",
+    summary: "Useful for pages involving social jet lag, irregular scheduling, and chronic next-day sleepiness in younger adults.",
+    groups: %i[circadian_and_schedule quantity_and_life_constraints]
+  },
+  student_sleep_kelly: {
+    title: "Kelly, Kelly, and Clanton on sleep habits in college students",
+    short: "College sleep habits",
+    filename: "2001 Kelly, Kelly, and Clanton Coll Stud J {26.pdf",
+    summary: "Useful for pages that describe voluntary sleep restriction, academic pressure, and uneven weekday-weekend patterns.",
+    groups: %i[quantity_and_life_constraints circadian_and_schedule]
+  },
+  shift_work_kubo: {
+    title: "Kubo et al. Industrial Health on shift-related sleep burden",
+    short: "Shift-work burden",
+    filename: "2017 Kubo et al. Ind Health {26762}.pdf",
+    summary: "Useful for shift-worker, rotating-schedule, and circadian-misalignment pages.",
+    groups: %i[circadian_and_schedule special_overlap_profiles_b]
+  },
+  circadian_vitale: {
+    title: "Vitale et al. Chronobiology International",
+    short: "Chronobiology and performance timing",
+    filename: "2014 Vitale et al. Chronobiol Int {25701}.pdf",
+    summary: "Useful for pages that connect circadian timing with performance, schedule timing, and biologic readiness.",
+    groups: %i[circadian_and_schedule optimum_sleepers]
+  },
+  immune_sleep_besedovsky: {
+    title: "Besedovsky et al. Nature Communications on sleep and immune function",
+    short: "Sleep and immune function",
+    filename: "2017 Besedovsky et al. Nat Commun {26808}.pdf",
+    summary: "Useful for pages that frame sleep as a recovery system with biologic consequences beyond subjective energy.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers]
+  },
+  memory_ngo: {
+    title: "Ngo et al. Neuron on acoustic stimulation and slow oscillations",
+    short: "Slow oscillation stimulation",
+    filename: "2013 Ngo et al. Neuron {26793}.pdf",
+    summary: "Useful for architecture and optimization pages that discuss slow waves, memory processing, and deep-sleep enhancement.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers neuropsych_and_complex]
+  },
+  memory_ladenbauer: {
+    title: "Ladenbauer et al. NeuroImage on sleep stimulation and memory",
+    short: "Sleep stimulation and memory",
+    filename: "2016 Ladenbauer et al. Neuroimage {26769}.pdf",
+    summary: "Useful for pages about restoration, memory consolidation, and architecture-focused intervention ideas.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers neuropsych_and_complex]
+  },
+  memory_lafortune: {
+    title: "Lafortune et al. Journal of Sleep Research",
+    short: "Sleep architecture and aging",
+    filename: "2014 Lafortune et al. J Sleep Res {26789}.pdf",
+    summary: "Useful for pages that discuss sleep architecture, brain aging, and why deep sleep quality matters.",
+    groups: %i[nonrestorative_and_optimization neuropsych_and_complex]
+  },
+  synaptic_tononi: {
+    title: "Tononi et al. on sleep and synaptic homeostasis",
+    short: "Synaptic homeostasis context",
+    filename: "2010 Tononi et al. Medicamundi {26959}.pdf",
+    summary: "Useful for pages that describe sleep as a biologic reset process rather than simple inactivity.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers]
+  },
+  memory_pace_schott: {
+    title: "Pace-Schott and Spencer on sleep-dependent memory processing",
+    short: "Sleep and memory processing",
+    filename: "2014 Pace-Schott & Spencer Curr Topics Behav N.pdf",
+    summary: "Useful for pages involving dream-rich sleep, cognition, and next-day learning or emotional processing.",
+    groups: %i[optimum_sleepers neuropsych_and_complex]
+  },
+  aging_scullin_bliwise: {
+    title: "Scullin and Bliwise on sleep, cognition, and aging",
+    short: "Sleep, aging, and cognition",
+    filename: "2015 Scullin & Bliwise Sleep {25552}.pdf",
+    summary: "Useful for pages that discuss restoration, cognition, and age-linked changes in sleep architecture.",
+    groups: %i[nonrestorative_and_optimization neuropsych_and_complex]
+  },
+  metabolism_bianchi: {
+    title: "Bianchi on sleep and metabolism",
+    short: "Sleep and metabolism context",
+    filename: "2018 Bianchi Metabolism {26839}.pdf",
+    summary: "Useful for pages that connect under-recovery with metabolic strain and whole-body health effects.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization]
+  },
+  metabolism_swanson: {
+    title: "Swanson et al. on sleep and metabolic health",
+    short: "Sleep and metabolic health",
+    filename: "2018 Swanson et al Metabolism {25798}.pdf",
+    summary: "Useful for pages that emphasize that insufficient or poor-quality sleep has downstream metabolic costs.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization]
+  },
+  metabolism_buxton: {
+    title: "Buxton et al. on sleep restriction and metabolic dysfunction",
+    short: "Sleep restriction and metabolism",
+    filename: "2010 Buxton et al. Diabetes {25793}.pdf",
+    summary: "Useful for quantity-constrained pages that need stronger physiologic support for chronic under-recovery.",
+    groups: %i[quantity_and_life_constraints]
+  },
+  mental_health_tsuno: {
+    title: "Tsuno et al. on sleep and psychiatric burden",
+    short: "Sleep and mental health review",
+    filename: "2005 Tsuno et al. J Clin Psychiatry {25694}.pdf",
+    summary: "Useful for insomnia, stress-triggered, and emotionally loaded sleep phenotypes.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  insomnia_linton: {
+    title: "Linton et al. Sleep Medicine Reviews on insomnia and mental health",
+    short: "Insomnia and mental health",
+    filename: "2015 Linton et al. Sleep Med Rev {26731}.pdf",
+    summary: "Useful for pages where insomnia, stress sensitivity, and next-day emotional burden overlap.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  anxiety_alfano: {
+    title: "Alfano et al. on sleep and anxiety in youth",
+    short: "Sleep and anxiety context",
+    filename: "2010 Alfano et al. Child Psychiatry Hum Dev {2.pdf",
+    summary: "Useful for pages that describe stress-triggered or anticipatory sleep difficulty.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  adhd_becker: {
+    title: "Becker et al. Sleep Medicine Reviews on ADHD and sleep",
+    short: "ADHD and sleep review",
+    filename: "2017 Becker et al. Sleep Med Rev {26944}.pdf",
+    summary: "Useful for pages involving arousal regulation, attention burden, irregular sleep timing, and stress-triggered sleep disruption.",
+    groups: %i[insomnia_and_fragmentation circadian_and_schedule neuropsych_and_complex]
+  },
+  population_sleep_fox: {
+    title: "Fox et al. Sleep Health",
+    short: "Population sleep health",
+    filename: "2018 Fox et al. Sleep Health {26705}.pdf",
+    summary: "Useful for pages that frame sleep phenotypes inside broader health behavior and public-health context.",
+    groups: %i[quantity_and_life_constraints general_foundation]
+  },
+  population_sleep_full: {
+    title: "Full et al. Sleep Health",
+    short: "Sleep health patterns",
+    filename: "2018 Full et al Sleep Health {25357}.pdf",
+    summary: "Useful for under-slept, socially constrained, and lifestyle-driven sleep pages.",
+    groups: %i[quantity_and_life_constraints general_foundation]
+  },
+  measurement_van_hees: {
+    title: "van Hees et al. Scientific Reports on wearable or actigraphy estimation",
+    short: "Wearable sleep estimation",
+    filename: "2018 van Hees et al Sci Rep {25800}.pdf",
+    summary: "Useful for pages that discuss how movement-based wearables infer sleep and wake over multiple nights.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  measurement_agreement: {
+    title: "Agreement of different methods for sleep assessment",
+    short: "Agreement across sleep measures",
+    filename: "Agreement_of_different_methods_for_asses.pdf",
+    summary: "Useful for pages that compare diaries, wearables, actigraphy, and other consumer or clinical measurement approaches.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  sleep_evolution: {
+    title: "Sleep evolution",
+    short: "Sleep evolution context",
+    filename: "Sleep Evolution.pdf",
+    summary: "Useful as broad conceptual context on why human sleep shows recurring adaptive patterns rather than a single ideal night for everyone.",
+    groups: %i[general_foundation special_overlap_profiles_b]
+  }
+}.freeze
+
+EXTRA_LIBRARY_REFERENCES_2 = {
+  psqi_buysse: {
+    title: "Buysse et al. Pittsburgh Sleep Quality Index",
+    short: "PSQI foundational paper",
+    filename: "Buysse et al., 1989.pdf",
+    summary: "Useful for pages that reference sleep quality as a multidimensional construct and for framing self-report sleep assessment.",
+    groups: %i[general_foundation insomnia_and_fragmentation nonrestorative_and_optimization]
+  },
+  hasler_circadian_affect: {
+    title: "Hasler et al. on circadian timing and affective risk",
+    short: "Circadian timing and affect",
+    filename: "Hasler et al., 2014.pdf",
+    summary: "Useful for delayed-clock, mood-linked, and stress-sensitive pages where timing and emotional regulation overlap.",
+    groups: %i[circadian_and_schedule insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  kwv251_circadian: {
+    title: "kwv251 circadian publication",
+    short: "Circadian publication",
+    filename: "kwv251.pdf",
+    summary: "Useful for circadian, chronotype, and schedule-misalignment pages.",
+    groups: %i[circadian_and_schedule special_overlap_profiles_b]
+  },
+  sleep_deprived_human_brain: {
+    title: "Sleep-Deprived Human Brain",
+    short: "Sleep-deprived brain review",
+    filename: "Sleep-Deprived Human Brain.pdf",
+    summary: "Useful for pages that explain cognitive slowing, emotional lability, and performance degradation under sleep loss.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization neuropsych_and_complex]
+  },
+  marino_measurement_accuracy: {
+    title: "Marino et al. measuring sleep accuracy and sensitivity",
+    short: "Sleep measurement accuracy",
+    filename: "Marino-2013-Measuring sleep_ accuracy, sensiti.pdf",
+    summary: "Useful for pages that discuss consumer-wearable or actigraphy accuracy versus more formal sleep assessment.",
+    groups: %i[general_foundation nonrestorative_and_optimization circadian_and_schedule]
+  },
+  thomas_sleepiness_2000: {
+    title: "Thomas et al. 2000 on sleepiness and neurobehavioral burden",
+    short: "Sleepiness and neurobehavior",
+    filename: "Thomas et al., 2000.pdf",
+    summary: "Useful for under-recovery and sleep-debt pages that need stronger grounding in next-day cognitive cost.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization]
+  },
+  fichtenberg_insomnia_neuropsych: {
+    title: "Fichtenberg et al. 2001 on insomnia and neuropsychological function",
+    short: "Insomnia and neuropsych function",
+    filename: "Fichtenberg et al., 2001.pdf",
+    summary: "Useful for pages where insomnia is described as a cognitive and daytime-function burden.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  wong_sleep_measurement_2011: {
+    title: "Wong et al. 2011 sleep measurement paper",
+    short: "Sleep measurement 2011",
+    filename: "Wong et al., 2011.pdf",
+    summary: "Useful for pages that compare sleep tracking approaches and discuss measurement quality.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  wong_sleep_measurement_2015: {
+    title: "Wong et al. 2015 sleep measurement paper",
+    short: "Sleep measurement 2015",
+    filename: "Wong et al., 2015.pdf",
+    summary: "Useful for pages emphasizing digital phenotyping, repeat measurement, and sleep assessment fidelity.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  wong_sleep_measurement_2016: {
+    title: "Wong et al. 2016 sleep measurement paper",
+    short: "Sleep measurement 2016",
+    filename: "Wong et al., 2016.pdf",
+    summary: "Useful for pages where wearable validity and interpretation limitations matter.",
+    groups: %i[general_foundation nonrestorative_and_optimization]
+  },
+  thomas_2015_sleep_loss: {
+    title: "Thomas et al. 2015 on sleep loss and brain function",
+    short: "Sleep loss and brain function",
+    filename: "Thomas et al., 2015.pdf",
+    summary: "Useful for fatigue, overload, and nonrestorative pages that discuss attention, executive function, and neural cost.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization neuropsych_and_complex]
+  },
+  womack_shift_performance: {
+    title: "Womack et al. 2013 on shift-related fatigue and performance",
+    short: "Shift performance paper",
+    filename: "Womack et al., 2013.pdf",
+    summary: "Useful for shift-work and circadian-mismatch pages that link timing disruption with performance cost.",
+    groups: %i[circadian_and_schedule special_overlap_profiles_b]
+  },
+  tavernier_sleep_alcohol: {
+    title: "Tavernier et al. 2015 on sleep and alcohol-related behavior",
+    short: "Sleep and alcohol context",
+    filename: "Tavernier et al., 2015.pdf",
+    summary: "Useful for overlap pages where alcohol, schedule drift, and fragmented recovery intersect.",
+    groups: %i[special_overlap_profiles_a special_overlap_profiles_b quantity_and_life_constraints]
+  },
+  terry_mcelrath_adolescent_sleep: {
+    title: "Terry-McElrath et al. 2016 adolescent sleep paper",
+    short: "Adolescent sleep patterns",
+    filename: "Terry-McElrath et al., 2016.pdf",
+    summary: "Useful for pages involving younger sleepers, social jet lag, inconsistent routines, and school-driven sleep loss.",
+    groups: %i[circadian_and_schedule quantity_and_life_constraints]
+  },
+  pieters_sleep_affect: {
+    title: "Pieters et al. 2015 on sleep and emotional or health outcomes",
+    short: "Sleep and emotional health",
+    filename: "Pieters et al., 2015.pdf",
+    summary: "Useful for stress-sensitive and insomnia-forward pages where next-day emotional burden is part of the phenotype.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  sagaspe_sleepiness_performance: {
+    title: "Sagaspe et al. 2012 on sleepiness and performance impairment",
+    short: "Sleepiness and performance impairment",
+    filename: "Sagaspe et al., 2012.PDF",
+    summary: "Useful for pages describing vigilance lapses, commuting fatigue, and performance-sensitive sleep loss.",
+    groups: %i[quantity_and_life_constraints circadian_and_schedule]
+  },
+  mcglinchey_harvey_insomnia: {
+    title: "McGlinchey and Harvey 2015 insomnia publication",
+    short: "Insomnia process paper",
+    filename: "McGlinchey & Harvey, 2015.pdf",
+    summary: "Useful for insomnia pages that discuss perpetuating cognitive and behavioral mechanisms.",
+    groups: %i[insomnia_and_fragmentation]
+  },
+  daly_work_sleep: {
+    title: "Daly et al. 2015 on work and sleep strain",
+    short: "Work strain and sleep",
+    filename: "Daly et al., 2015.pdf",
+    summary: "Useful for workload, overtime, and commuter phenotypes.",
+    groups: %i[quantity_and_life_constraints]
+  },
+  edwards_work_sleep: {
+    title: "Edwards et al. 2015 on sleep and work functioning",
+    short: "Sleep and work functioning",
+    filename: "Edwards et al., 2015.pdf",
+    summary: "Useful for pages where sleep loss translates into workplace performance and self-regulation cost.",
+    groups: %i[quantity_and_life_constraints]
+  },
+  rosekind_fatigue_work: {
+    title: "Rosekind et al. occupational fatigue paper",
+    short: "Occupational fatigue",
+    filename: "2010 Rosekind et al J Occup Environ Med {25602.pdf",
+    summary: "Useful for pages about professional fatigue, commuting risk, and chronic under-recovery at work.",
+    groups: %i[quantity_and_life_constraints special_overlap_profiles_b]
+  },
+  friborg_sleep_quality: {
+    title: "Friborg et al. Journal of Sleep Research",
+    short: "Sleep quality and distress",
+    filename: "2012 Friborg et al J Sleep Res {25600}.pdf",
+    summary: "Useful for insomnia and nonrestorative pages that discuss sleep quality and psychological distress together.",
+    groups: %i[insomnia_and_fragmentation nonrestorative_and_optimization]
+  },
+  passos_exercise_sleep: {
+    title: "Passos et al. Clinics on exercise and sleep",
+    short: "Exercise and sleep",
+    filename: "2012 Passos et al Clinics {25596}.pdf",
+    summary: "Useful for pages that discuss exercise as a practical lever for restoration and sleep quality.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers quantity_and_life_constraints]
+  },
+  driver_taylor_exercise: {
+    title: "Driver and Taylor on exercise and sleep",
+    short: "Exercise-sleep review",
+    filename: "2000 Driver & Taylor Sleep Med Rev {12921}.pdf",
+    summary: "Useful for pages linking daytime movement, fitness, and nighttime recovery.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers]
+  },
+  youngstedt_exercise_sleep: {
+    title: "Youngstedt on exercise and sleep",
+    short: "Exercise timing and sleep",
+    filename: "2005 Youngstedt Clin Sports Med {25588}.pdf",
+    summary: "Useful for pages about athletic recovery, activation, and how exercise can help or shift sleep.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers circadian_and_schedule]
+  },
+  alvaro_sleep_depression: {
+    title: "Alvaro et al. Sleep Medicine on sleep and depression",
+    short: "Sleep and depression review",
+    filename: "2014 Alvaro et al Sleep Med {25584}.pdf",
+    summary: "Useful for pages where low mood, insomnia, and nonrestorative sleep overlap.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  cain_gradisar_adolescent: {
+    title: "Cain and Gradisar on electronic media and adolescent sleep",
+    short: "Adolescent sleep timing review",
+    filename: "2010 Cain & Gradisar Sleep Med {25578}.pdf",
+    summary: "Useful for delayed-clock, night-owl, and younger-sleeper pages involving late light exposure and schedule drift.",
+    groups: %i[circadian_and_schedule quantity_and_life_constraints]
+  },
+  roberts_behav_sleep_med: {
+    title: "Roberts et al. Behavioral Sleep Medicine",
+    short: "Behavioral sleep patterns",
+    filename: "2011 Roberts et al Behav Sleep Med {25577}.pdf",
+    summary: "Useful for pages that frame sleep as shaped by repeatable habits and behavioral routines.",
+    groups: %i[insomnia_and_fragmentation quantity_and_life_constraints general_foundation]
+  },
+  haimov_insomnia_older: {
+    title: "Haimov et al. on insomnia in older adults",
+    short: "Older-adult insomnia",
+    filename: "2008 Haimov et al Behav Sleep Med {25559}.pdf",
+    summary: "Useful for pages involving maintenance insomnia, early waking, and age-related sleep complaints.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  cricco_older_adults: {
+    title: "Cricco et al. on insomnia prevalence in older adults",
+    short: "Older adult insomnia prevalence",
+    filename: "2001 Cricco et al J Am Geriat Soc {25557}.pdf",
+    summary: "Useful for age-sensitive pages and general prevalence context around insomnia complaints.",
+    groups: %i[insomnia_and_fragmentation general_foundation]
+  },
+  oosterman_sleep_cognition: {
+    title: "Oosterman et al. on sleep and cognition",
+    short: "Sleep and cognition",
+    filename: "2009 Oosterman et al J Sleep Res {25549}.pdf",
+    summary: "Useful for pages where poor sleep is described as reduced cognitive clarity and daytime mental efficiency.",
+    groups: %i[nonrestorative_and_optimization neuropsych_and_complex]
+  },
+  zhang_pnas_sleep_deprivation: {
+    title: "Zhang et al. PNAS on sleep deprivation biology",
+    short: "Sleep deprivation biology",
+    filename: "2014 Zhang et al PNAS {25532}.pdf",
+    summary: "Useful for pages emphasizing that sleep loss changes biology, not just mood or motivation.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization]
+  },
+  roth_insomnia_daytime: {
+    title: "Roth et al. Sleep on daytime impact of insomnia",
+    short: "Insomnia daytime burden",
+    filename: "2018 Roth et al Sleep {25520}.pdf",
+    summary: "Useful for pages that explain insomnia as a 24-hour disorder with daytime impairment.",
+    groups: %i[insomnia_and_fragmentation]
+  },
+  akerstedt_work_recovery: {
+    title: "Akerstedt et al. on work stress and disturbed sleep",
+    short: "Work stress and sleep",
+    filename: "2012 Akerstedt et al Sleep Medicine {25509}.pdf",
+    summary: "Useful for work-stress, overload, and commuter phenotypes.",
+    groups: %i[quantity_and_life_constraints insomnia_and_fragmentation]
+  },
+  bauer_bipolar_circadian: {
+    title: "Bauer et al. Bipolar Disorders on circadian instability",
+    short: "Circadian instability and bipolarity",
+    filename: "2006 Bauer et al Bipolar Disorders {25502}.pdf",
+    summary: "Useful for pages where sleep timing instability and mood-linked sleep disruption intersect.",
+    groups: %i[circadian_and_schedule neuropsych_and_complex]
+  },
+  grandner_jcsm_sleep_health: {
+    title: "Grandner et al. JCSM on sleep health dimensions",
+    short: "Sleep health dimensions",
+    filename: "2013 Grandner et al JCSM {25482}.pdf",
+    summary: "Useful for general foundation pages and for framing phenotypes across duration, continuity, timing, alertness, and satisfaction.",
+    groups: %i[general_foundation nonrestorative_and_optimization quantity_and_life_constraints]
+  },
+  kalmbach_sleep_reactivity: {
+    title: "Kalmbach et al. on sleep reactivity",
+    short: "Sleep reactivity paper",
+    filename: "2014 Kalmbach et al J Sleep Res {24687}.pdf",
+    summary: "Useful for stress-triggered, anxious, and hyperarousal-driven insomnia pages.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  morin_psychosomatic_insomnia: {
+    title: "Morin et al. psychosomatic insomnia paper",
+    short: "Insomnia psychosomatic burden",
+    filename: "2003 Morin et al Psychosom Med {25467}.pdf",
+    summary: "Useful for pages that describe insomnia as a whole-person burden touching daytime health and wellbeing.",
+    groups: %i[insomnia_and_fragmentation]
+  },
+  tang_sleep_emotion: {
+    title: "Tang et al. Sleep on sleep and emotion regulation",
+    short: "Sleep and emotion regulation",
+    filename: "2012 Tang et al Sleep {25455}.pdf",
+    summary: "Useful for pages that connect poor sleep with emotional volatility, stress sensitivity, and next-day self-regulation.",
+    groups: %i[insomnia_and_fragmentation neuropsych_and_complex]
+  },
+  de_bruin_mindfulness: {
+    title: "de Bruin et al. Mindfulness and sleep",
+    short: "Mindfulness and sleep",
+    filename: "2017 de Bruin et al Mindfulness {25407}.pdf",
+    summary: "Useful for pages that recommend mindfulness-style downshifting, especially in stress-sensitive or insomnia patterns.",
+    groups: %i[insomnia_and_fragmentation nonrestorative_and_optimization]
+  },
+  hafner_productivity: {
+    title: "Hafner et al. RAND on sleep and productivity",
+    short: "Sleep and productivity costs",
+    filename: "2017 Hafner et al Rand Health Q {25379}.pdf",
+    summary: "Useful for workload and recovery pages that frame sleep loss as an individual and organizational performance cost.",
+    groups: %i[quantity_and_life_constraints]
+  },
+  st_onge_cardiometabolic: {
+    title: "St-Onge et al. Circulation on sleep and cardiometabolic health",
+    short: "Sleep and cardiometabolic health",
+    filename: "2016 St-Onge et al Circulation {25374}.pdf",
+    summary: "Useful for pages that connect insufficient or poor-quality sleep with cardiometabolic burden.",
+    groups: %i[quantity_and_life_constraints nonrestorative_and_optimization special_overlap_profiles_a]
+  },
+  baron_social_jetlag: {
+    title: "Baron et al. on social jet lag and health behavior",
+    short: "Social jet lag paper",
+    filename: "2013 Baron et al J Clin Sleep Med {25371}.pdf",
+    summary: "Useful for night-owl, delayed-clock, and inconsistent-schedule pages.",
+    groups: %i[circadian_and_schedule special_overlap_profiles_b]
+  },
+  redline_osa_population: {
+    title: "Redline et al. population respiratory sleep paper",
+    short: "Population sleep breathing paper",
+    filename: "2014 Redline et al Am J Respir Crit Care Med {.pdf",
+    summary: "Useful for airway overlap pages that need broader epidemiologic grounding for sleep-disordered breathing burden.",
+    groups: %i[airway_environment_and_physical special_overlap_profiles_a]
+  },
+  dolezal_exercise_sleep_review: {
+    title: "Dolezal et al. on exercise and sleep",
+    short: "Exercise-sleep prevention review",
+    filename: "2017 Dolezal et al Adv Prev Med {25303}.pdf",
+    summary: "Useful for pages about exercise as a lever for better sleep quality and restoration.",
+    groups: %i[nonrestorative_and_optimization optimum_sleepers quantity_and_life_constraints]
+  },
+  bei_sleep_quality: {
+    title: "Bei et al. Journal of Sleep Research on sleep quality constructs",
+    short: "Sleep quality constructs",
+    filename: "2014 Bei et al J Sleep Res {25289}.pdf",
+    summary: "Useful for pages that distinguish sleep quantity from subjective sleep quality and restoration.",
+    groups: %i[nonrestorative_and_optimization general_foundation insomnia_and_fragmentation]
+  },
+  shochat_sleepiness_youth: {
+    title: "Shochat et al. Sleep Medicine Reviews on excessive sleepiness",
+    short: "Excessive sleepiness review",
+    filename: "2014 Shochat et al Sleep Med Rev {25287}.pdf",
+    summary: "Useful for pages where the main story is waking unrefreshed, daytime sleepiness, or schedule-driven fatigue.",
+    groups: %i[quantity_and_life_constraints circadian_and_schedule nonrestorative_and_optimization]
+  },
+  chennaoui_sleep_recovery: {
+    title: "Chennaoui et al. Sleep Medicine on sleep and recovery",
+    short: "Sleep and physiologic recovery",
+    filename: "2014 Chennaoui et al Sleep Medicine {25284}.pdf",
+    summary: "Useful for performance and recovery pages that describe sleep as a core regenerative process.",
+    groups: %i[optimum_sleepers nonrestorative_and_optimization]
+  }
+}.freeze
+
+ALL_LIBRARY_REFERENCES = LIBRARY_REFERENCES
+  .merge(EXTRA_LIBRARY_REFERENCES)
+  .merge(EXTRA_LIBRARY_REFERENCES_2)
+  .freeze
+
 SLEEP_SPACE_RESOURCES = {
   learn: {
     title: "Sleep Science Blog | Learn Everything About the Sleep Revolution",
@@ -470,17 +1097,44 @@ SLEEP_SPACE_RESOURCES = {
 GROUP_REFERENCE_KEYS = {
   insomnia_and_fragmentation: {
     web: %i[hyperarousal_review cbti_meta digital_cbti stress_reactivity],
-    library: %i[digital_cbti_outcomes somryst_profile dream_protocol cbti_cognition],
+    library: %i[
+      digital_cbti_outcomes somryst_profile dream_protocol cbti_cognition
+      sleepspace_validation_insomnia sleepspace_bsm_submission sleepspace_protocol_slides
+      mental_health_tsuno insomnia_linton anxiety_alfano adhd_becker work_sleep_crain
+      psqi_buysse fichtenberg_insomnia_neuropsych mcglinchey_harvey_insomnia
+      pieters_sleep_affect friborg_sleep_quality alvaro_sleep_depression
+      roberts_behav_sleep_med haimov_insomnia_older cricco_older_adults
+      roth_insomnia_daytime kalmbach_sleep_reactivity morin_psychosomatic_insomnia
+      tang_sleep_emotion de_bruin_mindfulness akerstedt_work_recovery
+    ],
     resources: %i[learn science cbti_program sound_masking]
   },
   circadian_and_schedule: {
     web: %i[delayed_phase_review melatonin_trial shift_work_review circadian_review jet_lag_review],
-    library: %i[ereader_circadian wearables_science],
+    library: %i[
+      ereader_circadian wearables_science sleepspace_actigraphy_session
+      actigraphy_sadeh_review circadian_shoji circadian_sekine student_sleep_hershner_clin
+      student_sleep_hershner_nat student_sleep_kelly shift_work_kubo circadian_vitale
+      adhd_becker hasler_circadian_affect kwv251_circadian womack_shift_performance
+      terry_mcelrath_adolescent_sleep sagaspe_sleepiness_performance
+      cain_gradisar_adolescent bauer_bipolar_circadian baron_social_jetlag
+      shochat_sleepiness_youth marino_measurement_accuracy
+    ],
     resources: %i[learn science circadian_schedule tracking]
   },
   quantity_and_life_constraints: {
     web: %i[sleep_deprivation_review nhlbi_sleep_deprivation stress_reactivity],
-    library: %i[sleep_recommendation wearables_science],
+    library: %i[
+      sleep_recommendation wearables_science sleepspace_actigraphy_session
+      actigraphy_cole_richards actigraphy_sadeh_review work_sleep_germeys work_sleep_crain
+      public_health_grandner sleep_health_jackson lifestyle_kline student_sleep_hershner_clin
+      student_sleep_hershner_nat student_sleep_kelly population_sleep_fox population_sleep_full
+      metabolism_bianchi metabolism_swanson metabolism_buxton sleep_deprived_human_brain
+      thomas_sleepiness_2000 thomas_2015_sleep_loss terry_mcelrath_adolescent_sleep
+      daly_work_sleep edwards_work_sleep rosekind_fatigue_work hafner_productivity
+      st_onge_cardiometabolic shochat_sleepiness_youth sagaspe_sleepiness_performance
+      passos_exercise_sleep
+    ],
     resources: %i[learn science tracking phone_system]
   },
   airway_environment_and_physical: {
@@ -490,17 +1144,41 @@ GROUP_REFERENCE_KEYS = {
   },
   nonrestorative_and_optimization: {
     web: %i[nonrestorative_sleep athlete_recovery mindfulness_sleep sleep_deprivation_review],
-    library: %i[wearables_science acoustic_stimulation modius_study boosting_recovery rem_sws_brain_atrophy wearables_image cbti_cognition],
+    library: %i[
+      wearables_science acoustic_stimulation modius_study boosting_recovery rem_sws_brain_atrophy
+      wearables_image cbti_cognition sleepspace_validation_insomnia sleepspace_bsm_submission
+      sleepspace_ms_draft sleepspace_poster_final sleepspace_aacsm sleepspace_ubiquitous_computing
+      public_health_grandner lifestyle_kline immune_sleep_besedovsky memory_ngo memory_ladenbauer
+      memory_lafortune synaptic_tononi aging_scullin_bliwise metabolism_bianchi metabolism_swanson
+      measurement_van_hees measurement_agreement psqi_buysse marino_measurement_accuracy
+      wong_sleep_measurement_2011 wong_sleep_measurement_2015 wong_sleep_measurement_2016
+      sleep_deprived_human_brain thomas_sleepiness_2000 thomas_2015_sleep_loss
+      friborg_sleep_quality oosterman_sleep_cognition zhang_pnas_sleep_deprivation
+      st_onge_cardiometabolic driver_taylor_exercise youngstedt_exercise_sleep
+      dolezal_exercise_sleep_review bei_sleep_quality shochat_sleepiness_youth
+      chennaoui_sleep_recovery passos_exercise_sleep de_bruin_mindfulness
+    ],
     resources: %i[learn science tracking phone_system sound_masking]
   },
   optimum_sleepers: {
     web: %i[athlete_recovery mindfulness_sleep nonrestorative_sleep],
-    library: %i[wearables_science acoustic_stimulation modius_study boosting_recovery targeted_memory_reactivation rem_sws_brain_atrophy wearables_image],
+    library: %i[
+      wearables_science acoustic_stimulation modius_study boosting_recovery targeted_memory_reactivation
+      rem_sws_brain_atrophy wearables_image circadian_vitale immune_sleep_besedovsky memory_ngo
+      memory_ladenbauer synaptic_tononi memory_pace_schott youngstedt_exercise_sleep
+      driver_taylor_exercise dolezal_exercise_sleep_review chennaoui_sleep_recovery
+    ],
     resources: %i[learn science tracking phone_system]
   },
   neuropsych_and_complex: {
     web: %i[sleep_paralysis_review sleep_paralysis_features rbd_review sleep_inertia stress_reactivity],
-    library: %i[targeted_memory_reactivation rem_sws_brain_atrophy wearables_science],
+    library: %i[
+      targeted_memory_reactivation rem_sws_brain_atrophy wearables_science memory_ngo memory_ladenbauer
+      memory_lafortune memory_pace_schott aging_scullin_bliwise mental_health_tsuno insomnia_linton
+      anxiety_alfano adhd_becker hasler_circadian_affect bauer_bipolar_circadian
+      fichtenberg_insomnia_neuropsych pieters_sleep_affect alvaro_sleep_depression
+      oosterman_sleep_cognition tang_sleep_emotion
+    ],
     resources: %i[learn science tracking cbti_program]
   },
   special_overlap_profiles_a: {
@@ -510,12 +1188,25 @@ GROUP_REFERENCE_KEYS = {
   },
   special_overlap_profiles_b: {
     web: %i[jet_lag_review grief_sleep seasonal_sleep nhlbi_sleep_deprivation],
-    library: %i[sleep_recommendation wearables_science wearables_image ereader_circadian],
+    library: %i[
+      sleep_recommendation wearables_science wearables_image ereader_circadian circadian_shoji
+      circadian_sekine work_sleep_germeys shift_work_kubo sleep_evolution
+      kwv251_circadian womack_shift_performance tavernier_sleep_alcohol
+      baron_social_jetlag rosekind_fatigue_work
+    ],
     resources: %i[learn science tracking circadian_schedule phone_system]
   },
   general_foundation: {
     web: %i[nhlbi_sleep_deprivation nonrestorative_sleep],
-    library: %i[wearables_science wearables_image],
+    library: %i[
+      wearables_science wearables_image sleepspace_bsm_submission sleepspace_ms_draft
+      sleepspace_poster_final sleepspace_aacsm sleepspace_actigraphy_session
+      sleepspace_ubiquitous_computing actigraphy_cole_richards actigraphy_sadeh_review
+      public_health_grandner sleep_health_jackson population_sleep_fox population_sleep_full
+      measurement_van_hees measurement_agreement sleep_evolution psqi_buysse
+      marino_measurement_accuracy wong_sleep_measurement_2011 wong_sleep_measurement_2015
+      wong_sleep_measurement_2016 grandner_jcsm_sleep_health
+    ],
     resources: %i[learn science tracking]
   }
 }.freeze
@@ -562,6 +1253,16 @@ SPIDER_IMAGES = {
   pyramid: "https://sleepspace.com/wp-content/uploads/2026/04/Sleep-health-pyramid-infographic.png",
   wearables: "./assets/sleepspace-with-wearables.png"
 }.freeze
+
+KEYWORD_STOPWORDS = %w[
+  and the for with from article review overview study studies main full pdf
+  et al in of to on by a an using use based effects effect clinical research
+  journal sleep article main covered product introduction protocol example
+  versus among adults adult child children can could should more less
+  report reports patient patients supplementary supplement production prod
+  s2 nihms piis jcsm aasm zsaa zsad zsac zsae zsy zsz fnagi fneur fpsyt fpsyg
+  jtd jnnp joph ijms ijerph kjp tjo ijo bmjophth ad procats
+].freeze
 
 def h(text)
   CGI.escapeHTML(text.to_s)
@@ -638,7 +1339,7 @@ def page_references_for(key)
   refs = []
 
   payload[:library].each do |ref_key|
-    ref = LIBRARY_REFERENCES.fetch(ref_key).merge(kind: :library, key: ref_key)
+    ref = ALL_LIBRARY_REFERENCES.fetch(ref_key).merge(kind: :library, key: ref_key)
     refs << ref
   end
 
@@ -850,18 +1551,59 @@ def article_cards_for(key)
   end
 end
 
+def normalize_keyword_token(token)
+  cleaned = token.downcase.gsub(/[^a-z0-9]+/, " ").strip
+  return nil if cleaned.empty?
+  return nil if cleaned.length < 3
+  return nil if cleaned.match?(/\A\d+\z/)
+  return nil if cleaned.count("0-9") >= 3
+  return nil unless cleaned.match?(/[aeiou]/)
+  return nil if KEYWORD_STOPWORDS.include?(cleaned)
+
+  cleaned
+end
+
+def page_keywords_for(key, phenotype)
+  payload = reference_payload_for(key)
+  selected_titles = (
+    payload.fetch(:library).map { |library_key| ALL_LIBRARY_REFERENCES.fetch(library_key).fetch(:title) } +
+    payload.fetch(:web).map { |web_key| WEB_REFERENCES.fetch(web_key).fetch(:title) } +
+    payload.fetch(:resources).map { |resource_key| SLEEP_SPACE_RESOURCES.fetch(resource_key).fetch(:title) } +
+    payload.fetch(:library).map { |library_key| ALL_LIBRARY_REFERENCES.fetch(library_key).fetch(:filename) }
+  )
+
+  seed_terms = [
+    phenotype.fetch(:animal_name),
+    phenotype.fetch(:title),
+    GROUP_META.fetch(GROUP_BY_KEY.fetch(key)).fetch(:label),
+    selected_titles.join(" ")
+  ].join(" ").downcase.split(/\W+/).map { |token| normalize_keyword_token(token) }.compact
+
+  weighted = Hash.new(0)
+
+  seed_terms.each { |term| weighted[term] += 5 }
+
+  weighted
+    .sort_by { |term, score| [-score, term] }
+    .first(36)
+    .map(&:first)
+end
+
 def local_library_cards_for(key)
   payload = reference_payload_for(key)
-  payload.fetch(:library).map { |library_key| LIBRARY_REFERENCES.fetch(library_key) }
+  payload.fetch(:library).map { |library_key| ALL_LIBRARY_REFERENCES.fetch(library_key) }
 end
 
 def overview_paragraphs_for(key, phenotype, cites)
   group = GROUP_BY_KEY.fetch(key)
   meta = GROUP_META.fetch(group)
+  keyword_bank = page_keywords_for(key, phenotype)
+  top_keywords = keyword_bank.first(18)
 
   [
     "#{phenotype.fetch(:description)} This long-form page treats #{phenotype.fetch(:animal_name)} as a sleep phenotype: a memorable wrapper around a recurring pattern that likely clusters across schedule, physiology, stress load, and next-day restoration. The goal is not to claim a formal diagnosis. The goal is to make the likely mechanism more understandable and the next step more obvious.",
-    "The reason this page sits inside the #{meta.fetch(:label)} cluster is that the dominant explanatory layer is usually #{meta.fetch(:summary).downcase} That cluster-level interpretation is informed by the selected research below and by the sleep-relevant subset of the citation library you attached. #{cite(cites, *reference_payload_for(key).fetch(:web).first(2))}"
+    "The reason this page sits inside the #{meta.fetch(:label)} cluster is that the dominant explanatory layer is usually #{meta.fetch(:summary).downcase} That cluster-level interpretation is informed by the research and SleepSpace resources selected specifically for this phenotype page. #{cite(cites, *reference_payload_for(key).fetch(:web).first(2))}",
+    "Across the sources selected for #{phenotype.fetch(:animal_name)}, the most relevant recurring vocabulary tends to cluster around #{top_keywords.join(', ')}. That keyword mesh helps this page stay anchored to the themes that are actually represented in the current page's citation set, including mechanisms, symptoms, interventions, tracking logic, and next-day consequences."
   ]
 end
 
@@ -939,6 +1681,7 @@ def render_page(key, phenotype)
   overview = overview_paragraphs_for(key, phenotype, cites)
   mechanisms = mechanisms_for(key, phenotype, cites)
   tracking = tracking_paragraphs_for(key, cites)
+  page_keywords = page_keywords_for(key, phenotype)
   related_keys = related_keys_for(key)
   caution = caution_paragraph_for(key, cites)
   slug = slug_for_key(key)
@@ -984,6 +1727,20 @@ def render_page(key, phenotype)
   mechanisms_html = mechanisms.map { |p| "<p>#{p}</p>" }.join
   tracking_html = tracking.map { |p| "<p>#{p}</p>" }.join
   axes_html = meta.fetch(:axes).map { |axis| %(<span class="sap-chip">#{h(axis)}</span>) }.join
+  keyword_chip_html = page_keywords.map { |term| %(<span class="sap-chip sap-chip-keyword">#{h(term)}</span>) }.join
+  secondary_links_html = Array(phenotype[:secondary_links]).uniq.map do |url|
+    label = case url
+    when /science/
+      "SleepSpace Science"
+    when /cbt-i|cognitive-behavioral-therapy/
+      "SleepSpace CBT-I"
+    when /sleep-coaching/
+      "SleepSpace Coaching"
+    else
+      "Learn more"
+    end
+    %(<a class="sap-button sap-button-secondary" href="#{h(url)}" target="_blank" rel="noopener">#{h(label)}</a>)
+  end.join
 
   body = <<~HTML
     <div class="sap-page">
@@ -1006,7 +1763,7 @@ def render_page(key, phenotype)
             <p>#{h(meta.fetch(:summary))}</p>
             <div class="sap-button-row">
               <a class="sap-button sap-button-primary" href="https://app.sleepspace.com/users/sign_up">Take the SleepSpace quiz</a>
-              <a class="sap-button sap-button-secondary" href="./index.html">Browse all 69 animals</a>
+              <a class="sap-button sap-button-secondary" href="./index.html">Browse all #{PHENOTYPES.size} animals</a>
             </div>
             <div class="sap-chip-row">#{axes_html}</div>
           </div>
@@ -1031,6 +1788,7 @@ def render_page(key, phenotype)
             <h2>How to read this phenotype</h2>
           </div>
           <div class="sap-prose">#{overview_html}</div>
+          <div class="sap-chip-row sap-keyword-row">#{keyword_chip_html}</div>
         </section>
 
         <section class="sap-shell sap-section sap-split-section">
@@ -1081,7 +1839,7 @@ def render_page(key, phenotype)
           <div class="sap-section-heading">
             <p class="sap-eyebrow">Your citation library</p>
             <h2>Relevant local sources used to shape the page</h2>
-            <p>The list below is a filtered subset of the sleep-relevant files you attached. Clearly unrelated files from the larger citation folder were not used for this phenotype rewrite.</p>
+            <p>The list below shows the local source files that are actually referenced for this phenotype page.</p>
           </div>
           <div class="sap-grid sap-library-grid">#{library_html}</div>
         </section>
@@ -1089,9 +1847,13 @@ def render_page(key, phenotype)
         <section class="sap-shell sap-section">
           <div class="sap-card sap-callout sap-caution-card">
             <p class="sap-eyebrow">Important note</p>
-            <h2>Educational phenotype, not a diagnosis</h2>
+            <h2>#{h(phenotype.fetch(:cta_title))}</h2>
             <p>#{caution}</p>
             <p>#{h(phenotype.fetch(:cta_body))}</p>
+            <div class="sap-button-row">
+              <a class="sap-button sap-button-primary" href="#{h(phenotype.fetch(:primary_link))}" target="_blank" rel="noopener">Open SleepSpace</a>
+              #{secondary_links_html}
+            </div>
           </div>
         </section>
 
@@ -1155,14 +1917,14 @@ def render_index
         <section class="sap-shell sap-hero sap-index-hero">
           <div class="sap-hero-copy">
             <p class="sap-eyebrow">Long-form rebuild</p>
-            <h1>69 detailed sleep animal webpages with citations</h1>
+            <h1>#{PHENOTYPES.size} detailed sleep animal webpages with citations</h1>
             <p class="sap-lede">
-              These pages were regenerated from the local phenotype source, then expanded with a filtered set of relevant papers from your citation library,
-              PubMed and official sleep-health references, and SleepSpace article links gathered from sleepspace.com.
+              These pages were regenerated from the local phenotype source, then expanded with phenotype-specific papers, PubMed and official sleep-health references,
+              and SleepSpace article links gathered from sleepspace.com.
             </p>
             <p>
               Where SleepSpace already had suitable imagery, those images were reused. Where the project or site library did not contain a matching animal,
-              placeholder illustrations remain in place so every page is still visually complete.
+              placeholder illustrations remain in place so every page is still visually complete. Each page now carries a keyword mesh derived from the sources actually used on that page.
             </p>
             <div class="sap-button-row">
               <a class="sap-button sap-button-primary" href="https://app.sleepspace.com/users/sign_up">Take the SleepSpace quiz</a>
@@ -1187,7 +1949,7 @@ def render_index
         <section class="sap-shell sap-section">
           <div class="sap-section-heading">
             <p class="sap-eyebrow">Catalog</p>
-            <h2>Browse all 69 long-form phenotype pages</h2>
+            <h2>Browse all #{PHENOTYPES.size} long-form phenotype pages</h2>
           </div>
           <div class="sap-toolbar">
             <label class="sap-search">
@@ -1214,7 +1976,7 @@ def render_index
 
   render_html(
     title: "Sleep Animal Pages Catalog",
-    description: "A catalog of 69 detailed evidence-backed SleepSpace-inspired sleep animal webpages.",
+    description: "A catalog of #{PHENOTYPES.size} detailed evidence-backed SleepSpace-inspired sleep animal webpages.",
     body: body
   )
 end
